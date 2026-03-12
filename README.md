@@ -43,6 +43,7 @@ By leveraging LLMs (via Ollama API), we can scale the reasoning capability witho
 
 ## Project Architecture
 
+```bash
 
  logical-fallacy-detector/
 │
@@ -68,6 +69,7 @@ By leveraging LLMs (via Ollama API), we can scale the reasoning capability witho
 └──  evaluation/
     └── evaluate_agent.py       # Script to evaluate model performance on dataset
 
+```
 
 ---
 
@@ -88,7 +90,86 @@ By leveraging LLMs (via Ollama API), we can scale the reasoning capability witho
 ```bash
 git clone https://github.com/AadittyaGupta/logical-fallacy-detector.git
 cd logical-fallacy-detector
+```
+
+2. **Create a virtual environment and activate it:**
+
+```bash
+python -m venv .venv
+# Windows
+.venv\Scripts\activate
+# macOS/Linux
+source .venv/bin/activate
+```
+
+3. **Install dependencies:**
+
+```bash
+pip install -r requirements.txt
+```
+
+4. **Run the App:**
+
+```bash
+streamlit run app.py
+```
+
+---
+
+## Usage
+
+1. Open the app in your browser.
+2. Enter an argument in the text area or click one of the example fallacy buttons.
+3. Click Analyze Argument.
+4. View the structured result, including:
+- Detected Fallacy
+- Explanation
+- Suggested Improvement
+- AI Reasoning
+
+---
+
+## Evaluation
+
+**To measure model performance:**
+
+```bash
+python evaluation/evaluate_agent.py
+```
+
+**This will:**
+
+- Load the dataset (data/argument_dataset.json).
+- Analyze each argument using the LogicalFallacyAgent.
+- Compare predicted vs expected fallacies.
+- Print a summary with accuracy, correct/incorrect counts, and skipped tests.
+
+---
+
+## Example Output:
 
 
 
+---
 
+##Future Improvements
+
+- Switch LLM prompts to JSON output for more robust parsing.
+- Include confidence scores for predictions.
+- Expand the dataset for evaluation to cover more fallacy types.
+- Add a dashboard to visualize evaluation results interactively.
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+## References
+
+- [Streamlit Documentation](https://docs.streamlit.io/) – Official guide for building Python web apps with Streamlit  
+- [Ollama API](https://ollama.com/) – Documentation for interacting with the LLM API  
+- [Common Logical Fallacies](https://yourlogicalfallacyis.com/) – A comprehensive reference for fallacy types  
+- NLP Research: Argument Mining & Reasoning Detection – academic papers on extracting reasoning from text
