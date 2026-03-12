@@ -16,7 +16,7 @@ class LogicalFallacyAgent:
         response = call_llm(prompt)
         
         #  DEBUG PRINT - to see the raw response from the llm before parsing
-        print("RAW LLM RESPONSE:\n", response) 
+        # print("RAW LLM RESPONSE:\n", response) 
 
         # parse the response into structure fields
         parsed = parse_response(response)

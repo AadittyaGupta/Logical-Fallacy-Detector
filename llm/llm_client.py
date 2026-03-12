@@ -11,7 +11,8 @@ def call_llm(prompt):
     payload = {
         "model": MODEL,
         "prompt": prompt,
-        "stream": False                     # We'll not stream, we'll get a full response at once
+        "stream": False,                     # We'll not stream, we'll get a full response at once
+        "temperature": 0.2
     }
 
     try:
