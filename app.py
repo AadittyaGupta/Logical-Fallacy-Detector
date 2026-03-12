@@ -12,6 +12,25 @@ st.set_page_config(
     layout="centered"
 )
 
+
+# st.markdown("""
+# <style>
+# .result-card {
+#     padding: 20px;
+#     border-radius: 10px;
+#     background-color: #f8f9fb;
+#     border: 1px solid #e6e6e6;
+#     margin-top: 15px;
+# }
+
+# .result-title {
+#     font-weight: 600;
+#     font-size: 18px;
+#     margin-bottom: 8px;
+# }
+# </style>
+# """, unsafe_allow_html=True)
+
 ### Copy button component
 
 def copy_to_clipboard_button(text):
@@ -76,20 +95,57 @@ Logical fallacies are **mistakes in reasoning** that make an argument look convi
 
 ### EXPANDABLE EXAMPLE SECTION 
 
-with st.expander("See Example Arguments & Explanations"):
+# with st.expander("See Example Arguments & Explanations"):
     
-    st.markdown("#### 1. Ad Hominem")
-    st.write("**What it is:** Attacking the person making the argument rather than addressing the argument itself.")
-    st.code('"We should not trust his economic ideas because he dropped out of college."')
+#     st.markdown("#### 1. Ad Hominem")
+#     st.write("**What it is:** Attacking the person making the argument rather than addressing the argument itself.")
+#     st.code('"We should not trust his economic ideas because he dropped out of college."')
 
-    st.markdown("#### 2. Hasty Generalization")
-    st.write("**What it is:** Jumping to a broad conclusion based on a very small or unrepresentative piece of evidence.")
-    st.code('"Two students cheated on the exam, so the entire class must be dishonest."')
+#     st.markdown("#### 2. Hasty Generalization")
+#     st.write("**What it is:** Jumping to a broad conclusion based on a very small or unrepresentative piece of evidence.")
+#     st.code('"Two students cheated on the exam, so the entire class must be dishonest."')
 
-    st.markdown("#### 3. Slippery Slope")
-    st.write("**What it is:** Arguing that a small first step will inevitably lead to a chain of extreme, negative events.")
-    st.code('"If we allow students to use calculators, soon they will stop learning math altogether."')
+#     st.markdown("#### 3. Slippery Slope")
+#     st.write("**What it is:** Arguing that a small first step will inevitably lead to a chain of extreme, negative events.")
+#     st.code('"If we allow students to use calculators, soon they will stop learning math altogether."')
 
+### More Interactive Example Buttons Section
+
+st.markdown("### Try Example Arguments")
+
+## Row 1
+col1, col2, col3 = st.columns(3)
+
+example1 = "We should not trust his economic ideas because he dropped out of college."
+example2 = "If we allow students to redo tests, soon they will expect to redo every assignment."
+example3 = "Two students cheated on the exam, so the entire class must be dishonest."
+
+if col1.button("Ad Hominem"):
+    st.session_state["argument_input"] = example1
+
+if col2.button("Slippery Slope"):
+    st.session_state["argument_input"] = example2
+
+if col3.button("Hasty Generalization"):
+    st.session_state["argument_input"] = example3
+
+
+## Row 2
+
+col4, col5, col6 = st.columns(3)
+
+example4 = "Everyone is buying this phone, so it must be the best."
+example5 = "Either we ban social media completely or society will collapse."
+example6 = "You say we should reduce homework, but you just want students to stop learning."
+
+if col4.button("Bandwagon"):
+    st.session_state["argument_input"] = example4
+
+if col5.button("False Dilemma"):
+    st.session_state["argument_input"] = example5
+
+if col6.button("Straw Man"):
+    st.session_state["argument_input"] = example6
 
 st.write(
 """
@@ -112,7 +168,8 @@ st.markdown("### Enter an Argument:")
 argument = st.text_area(
     "Hidden Label String", # <- This string MUST be here, or Streamlit throws an error!
     height = 50, 
-    label_visibility="collapsed" 
+    label_visibility="collapsed",
+    key = "argument_input" 
 )
 
 
