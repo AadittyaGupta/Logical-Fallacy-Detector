@@ -12,7 +12,7 @@ class LogicalFallacyAgent:
         # Prepare prompt for the LLM by inserting the argument
         prompt = Prompt_Template.format(argument=argument)
 
-        # Call the llm to get the required anlysis
+        # Call the llm to get the required anlysiss
         response = call_llm(prompt)
         
         #  DEBUG PRINT - to see the raw response from the llm before parsing
