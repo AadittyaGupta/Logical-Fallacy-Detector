@@ -89,7 +89,7 @@ By leveraging LLMs (via Ollama API), we can scale the reasoning capability witho
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/AadittyaGupta/logical-fallacy-detector.git
+git clone https://github.com/AadittyaGupta/Logical-Fallacy-Detector.git
 cd logical-fallacy-detector
 ```
 
