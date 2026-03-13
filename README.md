@@ -150,8 +150,8 @@ python evaluation/evaluate_agent.py
 ## Example Output:
 
 <p align="enter">
-    <img src="assets/ui_example.png" width=750>
-</p>>
+    <img src="assets/ui_example.png" width=550>
+</p>
 
 ---
 
