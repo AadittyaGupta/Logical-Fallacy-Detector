@@ -1,0 +1,82 @@
+[
+  {
+    "argument": "Everyone is buying this phone, so it must be the best.",
+    "expected_fallacy": "Bandwagon"
+  },
+  {
+    "argument": "You shouldn't listen to Alex's argument about nutrition because he is overweight.",
+    "expected_fallacy": "Ad Hominem"
+  },
+  {
+    "argument": "If we allow students to redo this test, soon they will expect to redo every assignment.",
+    "expected_fallacy": "Slippery Slope"
+  },
+  {
+    "argument": "We should not listen to her opinion on politics because she is just a celebrity.",
+    "expected_fallacy": "Ad Hominem"
+  },
+  {
+    "argument": "Either we ban social media completely or society will collapse.",
+    "expected_fallacy": "False Dilemma"
+  },
+  {
+    "argument": "My grandfather smoked every day and lived to be 95, so smoking is not harmful.",
+    "expected_fallacy": "Hasty Generalization"
+  },
+  {
+    "argument": "This policy must be good because a famous actor supports it.",
+    "expected_fallacy": "Appeal to Authority"
+  },
+  {
+    "argument": "We should reject the proposal because it was suggested by our rival company.",
+    "expected_fallacy": "Genetic Fallacy"
+  },
+  {
+    "argument": "If we allow people to work from home, productivity will eventually disappear.",
+    "expected_fallacy": "Slippery Slope"
+  },
+  {
+    "argument": "Nobody has proven that ghosts do not exist, so they must be real.",
+    "expected_fallacy": "Appeal to Ignorance"
+  },
+  {
+    "argument": "People who oppose this law clearly hate progress.",
+    "expected_fallacy": "Straw Man"
+  },
+  {
+    "argument": "You say we should reduce homework, but you just want students to stop learning.",
+    "expected_fallacy": "Straw Man"
+  },
+  {
+    "argument": "If we raise taxes slightly, the entire economy will collapse.",
+    "expected_fallacy": "Slippery Slope"
+  },
+  {
+    "argument": "My friend tried this diet and lost weight, so it must work for everyone.",
+    "expected_fallacy": "Hasty Generalization"
+  },
+  {
+    "argument": "You cannot trust her research because she works for that company.",
+    "expected_fallacy": "Genetic Fallacy"
+  },
+  {
+    "argument": "All mammals are warm-blooded. Whales are mammals. Therefore whales are warm-blooded.",
+    "expected_fallacy": "None"
+  },
+  {
+    "argument": "Exercise improves cardiovascular health according to multiple medical studies.",
+    "expected_fallacy": "None"
+  },
+  {
+    "argument": "If it is raining, the ground will be wet. It is raining, therefore the ground is wet.",
+    "expected_fallacy": "None"
+  },
+  {
+    "argument": "Studies show that regular sleep improves cognitive performance.",
+    "expected_fallacy": "None"
+  },
+  {
+    "argument": "Eating vegetables regularly contributes to better overall health.",
+    "expected_fallacy": "None"
+  }
+]
