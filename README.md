@@ -186,7 +186,7 @@ Python changes the working module path to the **evaluation folder**, which preve
 ## Example Evaluation Results
 
 <p align="Center">
-    <img src="assets/terminal_tests.png" width=500>
+    <img src="assets/terminal_tests.png" width=750>
 </p>
 
 ---
@@ -194,7 +194,7 @@ Python changes the working module path to the **evaluation folder**, which preve
 ### Example Evaluation Results
 
 <p align="Center">
-    <img src="assets/eval_summary.png" width=300>
+    <img src="assets/eval_summary.png" width=400>
 </p>
 
 Note: The evaluation currently uses strict label matching.  
