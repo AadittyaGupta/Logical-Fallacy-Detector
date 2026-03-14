@@ -130,37 +130,87 @@ streamlit run app.py
 
 ---
 
+## Example Output:
+
+<p align="Center">
+    <img src="assets/ui_example.png" width=500>
+</p>
+
+Users can enter an argument, analyze it, and receive:
+
+- Detected fallacy
+- Explanation of the reasoning error
+- Suggested improvements to strengthen the argument
+
+---
+
 ## Evaluation
+
+The repository includes an **evaluation module** that measures how well the LLM agent detects logical fallacies using a predefined dataset.
+
+The evaluation script will:
+
+- Load arguments from data/argument_dataset.json
+- Run each argument through the LogicalFallacyAgent
+- Compare predicted fallacies with expected labels
+- Generate an accuracy report
+
+**Running the Evaluation**
+
+Run the evaluation **from the project root directory:**
 
 **To measure model performance:**
 
 ```bash
-python evaluation/evaluate_agent.py
+python3 -m evaluation.evaluate_agent
 ```
 
-**This will:**
+**Why use -m instead of running the file directly?**
 
-- Load the dataset (data/argument_dataset.json).
-- Analyze each argument using the LogicalFallacyAgent.
-- Compare predicted vs expected fallacies.
-- Print a summary with accuracy, correct/incorrect counts, and skipped tests.
+The evaluation script imports modules from other folders such as:
+
+```bash
+from agents.fallacy_agent import LogicalFallacyAgent
+```
+
+When executing Python files inside subdirectories directly like:
+
+```bash
+python3 evaluation/evaluate_agent.py
+```
+
+Python changes the working module path to the **evaluation folder**, which prevents it from locating sibling modules such as agents.
 
 ---
 
-## Example Output:
+## Example Evaluation Results
 
-<p align="enter">
-    <img src="assets/ui_example.png" width=550>
+<p align="Center">
+    <img src="assets/terminal_tests.png" width=500>
 </p>
 
 ---
 
-##Future Improvements
+### Example Evaluation Results
 
-- Switch LLM prompts to JSON output for more robust parsing.
-- Include confidence scores for predictions.
-- Expand the dataset for evaluation to cover more fallacy types.
-- Add a dashboard to visualize evaluation results interactively.
+<p align="Center">
+    <img src="assets/eval_summary.png" width=300>
+</p>
+
+Note: The evaluation currently uses strict label matching.  
+Future improvements may include synonym-aware scoring and larger evaluation datasets.
+
+---
+
+## Future Improvements
+
+Potential directions for extending the project include:
+
+- Expanding the evaluation dataset with more diverse argument examples.
+- Constraining the LLM output to structured JSON format for more reliable parsing.
+- Adding confidence scoring for fallacy predictions.
+- Implementing synonym-aware evaluation metrics for fairer accuracy measurement.
+- Building an interactive dashboard for visualizing evaluation results and model performance.
 
 ---
 
