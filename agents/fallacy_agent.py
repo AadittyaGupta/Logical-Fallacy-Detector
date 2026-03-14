@@ -6,7 +6,7 @@ from utils.parser import parse_response
 class LogicalFallacyAgent:
     def analyzer(self, argument):
         """
-            Analyze a single argument and return a structured information
+        Analyze a single argument and return a structured information
         """
 
         # Prepare prompt for the LLM by inserting the argument
